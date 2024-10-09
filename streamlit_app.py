@@ -21,19 +21,18 @@ if uploaded_file is not None:
         # Read the uploaded Excel file into a DataFrame
         df = pd.read_excel(uploaded_file)
 
-        # Display the original data
-        st.subheader("Original Data")
-        st.write(df)
+        # Display the original data (first 10 rows)
+        st.subheader("Original Data (First 10 Rows)")
+        st.write(df.head(10))
 
         # Step 3: Process the data (transform the data)
         processed_df = process_data(df)
 
-        # Display the transformed data
-        st.subheader("Transformed Data")
-        st.write(processed_df)
+        # Display the transformed data (first 10 rows)
+        st.subheader("Transformed Data (First 10 Rows)")
+        st.write(processed_df.head(10))
 
         # Step 4: Download the transformed data as an Excel file
-        # Convert the processed DataFrame back to an Excel file in memory
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine='openpyxl') as writer:
             processed_df.to_excel(writer, index=False)

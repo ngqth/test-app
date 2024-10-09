@@ -12,9 +12,7 @@ uploaded_file = st.file_uploader("Upload your Excel file", type=["xlsx", "xls"])
 def process_data(df):
     # Example transformation: Add a new column with doubled values of the first numeric column
     # This is just a placeholder; modify it as needed for your transformation logic
-    numeric_cols = df.select_dtypes(include='number').columns
-    if not numeric_cols.empty:
-        df['Doubled'] = df[numeric_cols[0]] * 2
+    df['Processed'] = df.iloc[:, 0] * 2
     return df
 
 # Step 2: If a file is uploaded, process the file

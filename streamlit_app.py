@@ -6,7 +6,11 @@ import io
 st.title("Excel Data Transformer - Single Process, Dual Output")
 st.markdown(
     """
+    ### Instructions:
     Please upload 2 files to transform the data. The app will double the first numeric column in the first file and triple the first numeric column in the second file.
+
+    ### Contact:
+    If you have any questions or feedback, please contact the developer at [ngquocthang@gmail.com](mailto:ngqquocthang@gmail.com).
     """
 )
 

@@ -64,14 +64,14 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
 
         # Step 6: Provide download buttons for both Excel files (in the same processing step)
         st.download_button(
-            label="Download Transformed File 1",
+            label="Download 'Summary' File",
             data=output1.getvalue(),
             file_name="transformed_data_file1.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
 
         st.download_button(
-            label="Download Transformed File 2",
+            label="Download 'Sold' File",
             data=output2.getvalue(),
             file_name="transformed_data_file2.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"

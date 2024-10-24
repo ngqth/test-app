@@ -20,23 +20,10 @@ with st.sidebar:
         color_scheme = st.selectbox(
             "Color Scheme",
             [
-                "teal",
-                "tealgrn",
-                "tealrose",
-                "tempo",
-                "temps",
-                "thermal",
-                "tropic",
-                "turbid",
-                "turbo",
-                "twilight",
-                "viridis",
-                "ylgn",
-                "ylgnbu",
                 "ylorbr",
                 "ylorrd",
             ],
-            index=91,
+            index=1,
         )
         show_labels = st.checkbox("Show Node Labels", value=True)
         show_labels_on_hover = st.checkbox("Show Labels on Hover", value=False)

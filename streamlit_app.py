@@ -141,6 +141,7 @@ with st.sidebar:
         )
         edge_color = st.color_picker("Edge Color", "#888")
         apply_changes = st.form_submit_button("Apply Changes")
+
 # Step 1: Upload the first Excel file
 uploaded_file1 = st.file_uploader("Upload your first Excel file", type=["xlsx", "xls"], key="file1")
 
@@ -159,6 +160,8 @@ def process_data(production, sales):
     if not numeric_cols_2.empty:
         sales['Tripled'] = sales[numeric_cols_2[0]] * 3
 
+    production['time_retrieved'] = pd.Timestamp.now()
+    sales['time_retrieved'] = pd.Timestamp.now()
     # Return the two transformed DataFrames
     return production, sales
 
@@ -202,14 +205,14 @@ if uploaded_file1 is not None and uploaded_file2 is not None:
         st.download_button(
             label="Download 'Summary' File",
             data=output1.getvalue(),
-            file_name="transformed_data_file1.xlsx",
+            file_name="summary.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
 
         st.download_button(
             label="Download 'Sold' File",
             data=output2.getvalue(),
-            file_name="transformed_data_file2.xlsx",
+            file_name="sold.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
 

@@ -4,6 +4,11 @@ import io
 
 # Streamlit app title
 st.title("Excel Data Transformer - Single Process, Dual Output")
+st.markdown(
+    """
+    Please upload 2 files to transform the data. The app will double the first numeric column in the first file and triple the first numeric column in the second file.
+    """
+)
 
 # Step 1: Upload the first Excel file
 uploaded_file1 = st.file_uploader("Upload your first Excel file", type=["xlsx", "xls"], key="file1")

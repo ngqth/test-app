@@ -2,7 +2,10 @@ import streamlit as st
 import pandas as pd
 import io
 
+# ================== #
 # Streamlit app title
+# ================== #
+
 st.title("Excel Data Transformer - Single Process, Dual Output")
 st.markdown(
     """
@@ -49,6 +52,10 @@ with st.sidebar:
         )
         edge_color = st.color_picker("Edge Color", "#888")
         apply_changes = st.form_submit_button("Apply Changes")
+
+# ================== #
+# Main app           #
+# ================== #
 
 # Step 1: Upload the first Excel file
 uploaded_file1 = st.file_uploader("Upload your first Excel file", type=["xlsx", "xls"], key="file1")

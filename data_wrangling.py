@@ -1,6 +1,9 @@
 # %%
 import pandas as pd
 
+def test():
+    print('hello')
+
 # %%
 data_production = pd.read_excel('Production.xlsx')
 

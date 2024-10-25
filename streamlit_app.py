@@ -1,12 +1,14 @@
 import streamlit as st
 import pandas as pd
 import io
+from data_wrangling import test
 
 # ================== #
 # Streamlit app title
 # ================== #
 
 st.title("Excel Data Transformer - Single Process, Dual Output")
+st.caption(test())
 st.markdown(
     """
     ### Instructions:

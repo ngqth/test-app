@@ -8,7 +8,7 @@ from data_wrangling import test
 # ================== #
 
 st.title("Excel Data Transformer - Single Process, Dual Output")
-st.markdown(test())
+st.write(test())
 st.markdown(
     """
     ### Instructions:

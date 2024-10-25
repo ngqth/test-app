@@ -1,15 +1,14 @@
 import streamlit as st
 import pandas as pd
 import io
-from data_wrangling import test
+from utils.today import get_date
 
 # ================== #
 # Streamlit app title
 # ================== #
 
-st.title("Excel Data Transformer - Single Process, Dual Output")
-st.title(test())
-st.markdown(
+st.title("Excel Data Transformer - Produce profit and sales data")
+st.markdown( 
     """
     ### Instructions:
     Please upload 2 files to transform the data. The app will double the first numeric column in the first file and triple the first numeric column in the second file.
